@@ -1,6 +1,16 @@
-@LoginApi_HostAddress = http://localhost:5126
+@LoginApi_HostAddress = http://localhost:5000
 
+### test
 GET {{LoginApi_HostAddress}}/api/test/
 Accept: application/json
 
-###
+
+### signup
+POST {{LoginApi_HostAddress}}/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Example",
+  "email": "example@gmail.com",
+  "password": "password"
+}

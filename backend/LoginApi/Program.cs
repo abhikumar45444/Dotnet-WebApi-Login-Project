@@ -1,4 +1,5 @@
 using LoginApi.Data;
+using LoginApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")!
     )
 );
+
+builder.Services.AddScoped<AuthService>();
 
 var app = builder.Build();
 

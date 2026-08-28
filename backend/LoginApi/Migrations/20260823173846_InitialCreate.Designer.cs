@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LoginApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260820123249_InitialCreate")]
+    [Migration("20260823173846_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
