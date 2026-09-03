@@ -5,12 +5,22 @@ GET {{LoginApi_HostAddress}}/api/test/
 Accept: application/json
 
 
+# ### signup
+# POST {{LoginApi_HostAddress}}/api/auth/signup
+# Content-Type: application/json
+
+# # {
+# #   "name": "Example",
+# #   "email": "example@gmail.com",
+# #   "password": "password"
+# # }
+
 ### signup
 POST {{LoginApi_HostAddress}}/api/auth/signup
 Content-Type: application/json
 
 {
-  "name": "Example",
-  "email": "example@gmail.com",
-  "password": "password"
+  "name": "",
+  "email": "goku@gmail.com",
+  "password": "123456"
 }

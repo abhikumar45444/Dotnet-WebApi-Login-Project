@@ -16,8 +16,10 @@ public class AuthService
 
     public async Task<User> SignupAsync(SignupRequest request)
     {
-        var existingUser = await _context.Users
-            .FirstOrDefaultAsync(user => user.Email == request.Email);
+        var normalizedEmail = request.Email.Trim().ToLowerInvariant();
+
+        var existingUser = await _context.Users.
+            FirstOrDefaultAsync(user => user.Email == normalizedEmail);
 
         if (existingUser != null)
         {
@@ -29,7 +31,7 @@ public class AuthService
         var user = new User
         {
             Name = request.Name,
-            Email = request.Email,
+            Email = normalizedEmail,
             PasswordHash = passwordHash,
             CreatedAt = DateTime.UtcNow
         };
