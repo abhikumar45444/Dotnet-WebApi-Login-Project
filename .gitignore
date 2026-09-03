@@ -2,3 +2,5 @@
 
 backend/LoginApi/obj/
 backend/LoginApi/bin/
+
+frontend/node_modules
